@@ -1,5 +1,11 @@
+/* @font-face {
+    font-family: 'Playwright Cuba';
+    src: url('fonts/PlaywrightCuba.ttf') format('truetype');
+} */
 :root {
     --main-color:rgb(37, 41, 44) ;
+    --secondary-color: orange;
+    font-family: "Open Sans", sans-serif;
   }
 * {
     margin: 0;
@@ -53,7 +59,7 @@
     text-decoration: none;
     border-radius: 16px;
     height: fit-content;
-    background-color: orange;
+    background-color: var(--secondary-color);
 }
 
 .main-nav {
@@ -115,9 +121,14 @@ p {
 .wrapper {
     display: flex;
     gap: 20px;
-    justify-content:center;
     text-align: center;
 }
+.justify-content-center{
+justify-content: center;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+    }
 .large {
     margin: 50px 120px;
 }
@@ -148,14 +159,22 @@ h5 {
     align-items: center;
 }
 
-.btn.circular {
-    width: 50px;
-    height: 50px;
+.circular {
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    background-color: var(--secondary-color);
+}
+.small-circular{
+    width: 50px;
+    height: 50px;
+}
+.large-circular{
+    width: 100px;
+    height: 100px;
+    padding: 7px;
+    
 }
 .full-width-black {
     display: flex;
@@ -182,16 +201,11 @@ h5 {
 .form-container {
     width: 100%;
     text-align: start;
-    
-    
-   
 }
 form {
     gap: 20px;
 align-items: center;
-    height: 350px;
-  
-    
+    height: 350px;  
 }
 
 input, select {
@@ -207,4 +221,19 @@ option{
 .full-width-black h1 {
     color: orange;
     margin-bottom: 15px;
+}
+h1,h2,h5{
+    /* font-family: 'Playwright Cuba', "Times new Roman"; */
+    font-family: "Playwrite CU", cursive;
+    margin: 20px 1px ;
+}
+.home-link {
+    color:var(--secondary-color) ; 
+}
+.index-item {
+    color: white; 
+    background-color: var(--main-color);  
+    padding: 4px 20px; 
+    border-radius: 20px;  
+    font-size: 18px;  
 }
